@@ -45,7 +45,4 @@ public class Event extends AbstractEntity {
 	@RestResource(exported = false) //To create venue as part of events
 	private Venue venue;
 	
-	public Long getResourceId() {
-		return this.id;
-	}
 }

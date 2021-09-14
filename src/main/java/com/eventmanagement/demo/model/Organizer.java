@@ -18,8 +18,4 @@ public class Organizer extends AbstractEntity {
 	@OneToMany(mappedBy = "organizer")
 	private Set<Event> events;
 
-	public Long getResourceId() {
-		return this.id;
-	}
-
 }

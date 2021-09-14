@@ -20,9 +20,5 @@ public class Participant extends AbstractEntity {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(referencedColumnName = "ID", nullable = false, updatable = false)
 	private Event event;
-	
-	public Long getResourceId() {
-		return this.id;
-	}
 
 }

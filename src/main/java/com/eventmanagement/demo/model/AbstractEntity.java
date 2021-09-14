@@ -40,4 +40,7 @@ public class AbstractEntity {
 		this.created = created;
 	}
 
+	public Long getResourceId() {
+		return this.id;
+	}
 }
