@@ -1,7 +1,6 @@
 package com.eventmanagement.demo.model;
 
 import java.time.Instant;
-
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +11,10 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+
+import lombok.Data;
+
+@Data
 @MappedSuperclass
 public class AbstractEntity {
 
@@ -23,22 +26,6 @@ public class AbstractEntity {
 	@CreationTimestamp
 	@Column(updatable = false)
 	protected Instant created;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Instant getCreated() {
-		return created;
-	}
-
-	public void setCreated(Instant created) {
-		this.created = created;
-	}
 
 	public Long getResourceId() {
 		return this.id;
